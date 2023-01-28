@@ -1,18 +1,22 @@
 {% extends 'index.html' %}
 
-{% block content %}
-    <h1>{% block title %} Index {% endblock %}</h1>
+{% block masthead %}
+{% endblock %}
+
+{% block daily_entires %}
+{% endblock %}
+
+{% block title %}
+    <h1>Index</h1>
     <h1>Hello World!</h1>
     <h2>Welcome to FlaskApp!</h2>
     <h3>{{ utc_dt }}</h3>
 {% endblock %}
 
-{% block entry_info %}
-{% endblock %}
-
 {% block add_entry %}
 <!-- Add Entry Section-->
-    <section class="page-section" id="contact">
+    <br></br>
+    <section class="page-section" id="add-entry">
         <div class="container">
             <!-- Add Entry Section Heading-->
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Add an Entry</h2>
@@ -32,7 +36,7 @@
                     <!-- To make this form functional, sign up at-->
                     <!-- https://startbootstrap.com/solution/contact-forms-->
                     <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form id="entryForm" data-sb-form-api-token="API_TOKEN">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="date" type="text" placeholder="Enter a date..." data-sb-validations="required" />
