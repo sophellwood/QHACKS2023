@@ -36,29 +36,37 @@
                     <!-- To make this form functional, sign up at-->
                     <!-- https://startbootstrap.com/solution/contact-forms-->
                     <!-- to get an API token!-->
-                    <form id="entryForm" data-sb-form-api-token="API_TOKEN">
+
+          
+
+                        <form action="{{ url_for('add_todo') }}" method="POST" role="form">
+
                         <!-- Name input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="date" type="text" placeholder="Enter a date..." data-sb-validations="required" />
+                            <input name="add-date" class="form-control" id="date" type="text" placeholder="Enter a date..." data-sb-validations="required" />
                             <label for="date">Date</label>
                             <div class="invalid-feedback" data-sb-feedback="date:required">A date is required.</div>
+
                         </div>
+                       
+
+
                         <!-- Time input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="time" type="text" placeholder="Enter the start time..." data-sb-validations="required" />
+                            <input name="add-time" class="form-control" id="time" type="text" placeholder="Enter the start time..." data-sb-validations="required" />
                             <label for="symptom">Starting time of symptom</label>
                             <div class="invalid-feedback" data-sb-feedback="time:required">A time is required.</div>
                             <!-- <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div> -->
                         </div>
                         <!-- Symptom input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="symptom" type="text" placeholder="Enter your symptom..." data-sb-validations="required" />
+                            <input name="add-symptom" class="form-control" id="symptom" type="text" placeholder="Enter your symptom..." data-sb-validations="required" />
                             <label for="symptom">Symptom</label>
                             <div class="invalid-feedback" data-sb-feedback="symptom:required">A symptom is required.</div>
                         </div>
                         <!-- Rating input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="rating" type="text" placeholder="1 being horrible, 10 being perfectly fine..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <input name="add-rating" class="form-control" id="symptom" type="text" placeholder="Enter your symptom..." data-sb-validations="required" />
                             <label for="rating">How do you feel on a scale from 1 to 10?</label>
                             <div class="invalid-feedback" data-sb-feedback="rating:required">A rating is required.</div>
                         </div>
@@ -80,7 +88,7 @@
                         <!-- an error submitting the form-->
                         <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error adding entry!</div></div>
                         <!-- Submit Button-->
-                        <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Add</button>
+                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Add</button>
                     </form>
                 </div>
             </div>

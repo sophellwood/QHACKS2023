@@ -21,6 +21,25 @@
             <!-- Your History Section Heading-->
             
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Your History</h2>
+
+            <ul class="list-group t20">
+                    
+                <!-- <li class="list-group-item">XXX</li> -->
+                {% for entry in entries %}
+            
+                    <li class="list-group-item ">
+                        Rating: 
+                        {{ entry.rating }}<br>
+                        Date: 
+                        {{ entry.date }}
+                    </li>
+                    <br>
+                </a>
+                {% endfor %}
+            </ul>
+     
+
+
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
