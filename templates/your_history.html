@@ -1,0 +1,85 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>{% block title %} Index {% endblock %}</h1>
+    <h1>Hello World!</h1>
+    <h2>Welcome to FlaskApp!</h2>
+    <h3>{{ utc_dt }}</h3>
+{% endblock %}
+
+{% block entry_info %}
+{% endblock %}
+
+{% block your_history %}
+<!-- Your History Section-->
+    <section class="page-section your-history" id="your-history">
+        <div class="container">
+            <!-- Your History Section Heading-->
+            
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Your History</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Your History Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Your History Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="your-history-item mx-auto" data-bs-toggle="modal" data-bs-target="#yourHistoryModal1">
+                        <div class="your-history-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="your-history-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="static/assets/img/portfolio/cabin.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Your History Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="your-history-item mx-auto" data-bs-toggle="modal" data-bs-target="#yourHistoryModal2">
+                        <div class="your-history-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="your-history-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="static/assets/img/portfolio/cake.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Your History Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="your-history-item mx-auto" data-bs-toggle="modal" data-bs-target="#yourHistoryModal3">
+                        <div class="your-history-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="your-history-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="static/assets/img/portfolio/circus.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Your History Item 4-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="your-history-item mx-auto" data-bs-toggle="modal" data-bs-target="#yourHistoryModal4">
+                        <div class="your-history-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="your-history-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="static/assets/img/portfolio/game.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Your History Item 5-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="your-history-item mx-auto" data-bs-toggle="modal" data-bs-target="#yourHistoryModal5">
+                        <div class="your-history-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="your-history-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="static/assets/img/portfolio/safe.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Your History Item 6-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="your-history-item mx-auto" data-bs-toggle="modal" data-bs-target="#yourHistoryModal6">
+                        <div class="your-history-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="your-history-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="static/assets/img/portfolio/submarine.png" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

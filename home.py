@@ -7,6 +7,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route('/page1')
-def page1():
-    return render_template("page1.html")
+@app.route('/your_history')
+def your_history():
+    return render_template("your_history.html")
+
+@app.route('/add_entry')
+def add_entry():
+    return render_template("add_entry.html")
