@@ -20,17 +20,28 @@
         <div class="container">
             <!-- Your History Section Heading-->
             
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Your History</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Your History</h2><br><br>
 
             <ul class="list-group t20">
                     
                 {% for entry in entries %}
             
                     <li class="list-group-item ">
+                        <h4 class="text-uppercase mb-4">{{ entry.date }}</h4>
+                        <p class="lead">
+                        Starting time of symptom: 
+                        </p>
+                        {{ entry.time }}
+                        <br><br>
+                        <p class="lead">
+                        Symptom: 
+                        </p>
+                        {{ entry.symptom }}
+                        <br><br>
+                        <p class="lead">
                         Rating: 
-                        {{ entry.rating }}<br>
-                        Date: 
-                        {{ entry.date }}
+                        </p>
+                        {{ entry.rating }}
                     </li>
                     <br>
                 </a>
