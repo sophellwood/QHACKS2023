@@ -6,6 +6,13 @@
 {% block daily_entires %}
 {% endblock %}
 
+{% block title %}
+    <h1>Index</h1>
+    <h1>Hello World!</h1>
+    <h2>Welcome to FlaskApp!</h2>
+    <h3>{{ utc_dt }}</h3>
+{% endblock %}
+
 {% block your_history %}
 <!-- Your History Section-->
     <br><br>
@@ -18,12 +25,15 @@
             <ul class="list-group t20">
                     
                 {% for entry in entries %}
-            
+                
                     <li class="list-group-item ">
+                        <div id="myDIV">
                         <h4 class="text-uppercase mb-4">{{ entry.date }}</h4>
+                    </div>
                         <p class="lead">
                         Starting time of symptom: 
                         </p>
+                    
                         {{ entry.time }}
                         <br><br>
                         <p class="lead">
@@ -34,10 +44,20 @@
                         <p class="lead">
                         Rating: 
                         </p>
-                        {{ entry.rating }}
+                        {{ entry.rating }}<br><br>
+                        
+                        <button onclick="myFunction()" type="button" class="btn btn-success btn-sm">Highlight</button>
                     </li>
+                <script>
+                    function myFunction() {
+                      document.getElementById("myDIV").style.backgroundColor = "Thistle";
+                    }
+                    </script>
+                    
+                    <!-- <button onclick="myFunction()" type="button" class="btn btn-dark">Light</button> -->
                     <br>
                 </a>
+                
                 {% endfor %}
             </ul>
         </div>
