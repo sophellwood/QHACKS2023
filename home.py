@@ -31,3 +31,7 @@ def add_todo():
     new_rating = request.form.get('add-rating')
     names.insert_one({'date' : new_date, 'time' : new_time, 'symptom' : new_symptom, 'rating' : new_rating,'complete' : False})
     return redirect(url_for('your_history'))
+
+@app.route('/suggestions')
+def suggestions():    
+    return render_template("suggestions.html")
